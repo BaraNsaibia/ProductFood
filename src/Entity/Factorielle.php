@@ -32,30 +32,21 @@ class Factorielle
 
         return $this;
     }
-    public class Factorielle {
-    
-    private int mbr; 
-
-    
-    public Factorielle(int mbr) {
-        this.mbr = mbr;
-    }
-
-    
-    public int calculFactoriel() throws Exception {
-        if (mbr < 0) {
-            throw new Exception("Le nombre ne peut pas être négatif");
+    public function calculFactoriel(): int
+    {
+        if ($this->nbr < 0) {
+            throw new \Exception("Le nombre ne peut pas être négatif");
         }
-        
-       if (mbr == 0) {
+
+        if ($this->nbr === 0) {
             return 1;
         }
-        int f = 1;
-        for (int i = 2; i <= mbr; i++) {
-            f *= i; 
+
+        $f = 1;
+        for ($i = 2; $i <= $this->nbr; $i++) {
+            $f *= $i;
         }
-        
-        return f;
+
+        return $f;
     }
-}
 }
